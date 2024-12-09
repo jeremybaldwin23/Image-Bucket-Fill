@@ -412,19 +412,31 @@ def main():
     This function will not be tested, but you should
     implement it to test your code visually.
     """
-
     # read all input as a single string.
     data = sys.stdin.read()
 
     # create graph, passing in data
-
+    graph, start_index, color = create_graph(data)
+    
     # print adjacency matrix in a readable format (maybe row by row)
+    matrix = graph.create_adjacency_matrix()
 
+    for row in matrix:
+        for i in range(len(row)):
+            if i < len(row) - 1:
+                print(row[i], end=" ")
+            else:
+                print(row[i])
+    print()
+    
     # run bfs
-
+    graph.bfs(start_index, color)
+    
     # reset by creating graph again
-
+    graph, start_index, color = create_graph(data)
+    
     # run dfs
+    graph.dfs(start_index, color)
 
 
 if __name__ == "__main__":
