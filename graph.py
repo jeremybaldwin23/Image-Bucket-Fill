@@ -252,7 +252,6 @@ class ImageGraph:
 
     # Create the adjacency matrix.
     # Return the matrix at the end
-    # TODO: Modify this method. You may delete this comment when you are done.
     def create_adjacency_matrix(self):
         """
         Creates and returns the adjacency matrix for the graph.
@@ -402,9 +401,6 @@ def create_graph(data):
     # return the ImageGraph, starting position, and color as a tuple in this order.
     return graph, start_index, color
 
-
-
-# TODO: Modify this function. You may delete this comment when you are done.
 def main():
     """
     The main function that drives the program execution.
